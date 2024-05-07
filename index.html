@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 0 auto;
+
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #wrapper{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        #searchBar {
+            width: 60%;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        #alpha{
+            width: 20%;
+        }
+
+        #addNew {
+            border: 2px solid black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: fantasy;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <input type="text" id="searchBar">
+        <select name="alphabetical" id="alpha">
+            <option value="init">Normal</option>
+            <option value="a-z">A-Z</option>
+            <option value="z-a">Z-A</option>
+        </select>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    id
+                </th>
+                <th>
+                    Company Name
+                </th>
+                <th>
+                    Contact Name
+                </th>
+                <th>
+                    Contact Title
+                </th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="main">
+            <tr>
+                <td colspan="4" style="text-align: center;">LOADING...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="addNew">+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+        integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
