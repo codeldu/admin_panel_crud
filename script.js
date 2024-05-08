@@ -47,6 +47,9 @@ const sortElements = ( arr , target ) => {
         render(arr)
     }
 };
+
+//  test 
+
 let filterize = (key) =>{
     return suppliers.filter((supplier)=> supplier[key].toUpperCase().startsWith(searchBar.value.toUpperCase()))
 };
